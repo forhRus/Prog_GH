@@ -10,12 +10,13 @@ if(i <= num)
 {
     while(i <= num)
     {
-        if(i == num) Console.WriteLine(i + ".");
-        else Console.Write(i + ", ");
+        Console.Write(i);
         i+=2;
+        if(i > num) Console.WriteLine(".");
+        else Console.Write(", ");
     }
 }
 else
 {
-    Console.WriteLine($"{num} должно быть больше 1"); 
+    Console.WriteLine("Ошибка! Число должно быть больше 1"); 
 }
