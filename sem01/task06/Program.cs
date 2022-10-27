@@ -10,5 +10,4 @@ double funV(double arg)
     double i = 1 / arg;
     return i;
 } 
-;
 Console.WriteLine($"Обратное число от {num} является {funV(num):f2}.");
