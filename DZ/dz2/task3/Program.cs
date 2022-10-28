@@ -19,7 +19,7 @@ int number = Prompt("Введите число > "); //присваиваем з
 //     else return false;
 // }
 
-void res(int num)
+void res(int num) // функция на поиск и вывод третьей цифры в числе.
 {
     num = num / 100;
     if (num == 0)
