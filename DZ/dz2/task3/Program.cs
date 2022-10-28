@@ -11,21 +11,30 @@ int Prompt(string message) // функция на ввод числа
     return number;
 }
 
-int number = Prompt("Введите трёхзначное число > "); //присваиваем значение через ввод числа
-if(number < 0) number = number * -1; // переводим отрцательные числа, чтобы можно было работать и с ними
+int number = Prompt("Введите число > "); //присваиваем значение через ввод числа
 
-
-void res(int num) // функция на поиск и вывод третьей цифры в числе.
+bool check(int num) // отсеиваем двузнанчные числа
 {
-    num = num / 100;
-    if (num == 0) // отсеивание двухзначных чисел
+    if (num < 100)
     {
-        Console.WriteLine($"Некорректные данные. Введёное число не трёхзначное.");
+        Console.WriteLine($"В числе нет третьей цифры.");
+        return false;
     }
-    else
-    {
-        int dig3 = num % 10;
-        Console.WriteLine($"третья цифра {dig3}.");
-    }
+    else return true;
 }
-res(number);
+
+
+int Result(int num) // функция на поиск и вывод третьей цифры в числе.
+{
+    int thirtyDig = number;
+    if (check(number))
+    {
+        while (thirtyDig > 999)        
+        {
+            thirtyDig = thirtyDig / 10;
+        }
+        thirtyDig = thirtyDig % 10;
+    }
+    return thirtyDig;
+}
+Console.WriteLine($"третья цифра {Result(number)}.");
