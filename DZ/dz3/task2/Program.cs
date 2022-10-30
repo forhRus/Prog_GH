@@ -13,7 +13,7 @@
     int z = Convert.ToInt32(Console.ReadLine());
     return (x, y, z);
 }
-// задали точки.
+// задали координаты для точек а и б.
 (int xa, int ya, int za) = GetCoord("a");
 (int xb, int yb, int zb) = GetCoord("b");
 

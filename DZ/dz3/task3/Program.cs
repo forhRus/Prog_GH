@@ -11,21 +11,21 @@ int Prompt(string massege) //функция на ввод значения с к
 
 int number = Prompt("Введите число больше 0 > "); // задаём число с консоли.
 
-bool Validate(int number) //проверка на положительное число.
+bool Validate(int number) // функция для проверки положительности числа.
 {
-    if(number > 0) return true;
+    if (number > 0) return true;
     return false;
 }
 
-void Power(int number) // выводим последовательность до "number"
+void Power(int number) // выводим последовательность чисел "number" раз
 {
     if (Validate(number))
     {
         for (int i = 1; i <= number; i++)
         {
-            System.Console.Write($"{Math.Pow(i, 3)} "); //возводим в третью степень "i"
+            System.Console.Write($"{Math.Pow(i, 3)} "); //возводим в третью степень каждый шаг "i"
         }
-        System.Console.WriteLine();  
+        System.Console.WriteLine();
     }
     else System.Console.WriteLine("Некорректные данные.");
 }

@@ -49,8 +49,8 @@ void CheckPol(int num) //сравниваем число и его "палинд
     if (Validate(num)) //проверка
     {
         if (Pal(num) == num) System.Console.WriteLine($"число {number} - палиндром. Для наглядности {Pal(num)}"); // вывод палиндром
-        else System.Console.WriteLine($"число {number} - непалиндром. Для наглядности {Pal(num)}"); //вывод непалиндром
+        else System.Console.WriteLine($"число {number} - непалиндром. Для наглядности {Pal(num)}"); //вывод не палиндром
     }
 }
 
-CheckPol(number); //зовём проверку на палиндромность заданного числа
+CheckPol(number); //зовём проверку числа - палиндром ли оно?
