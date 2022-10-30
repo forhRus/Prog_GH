@@ -13,28 +13,26 @@ int Prompt(string message) // функция на ввод числа
 
 int number = Prompt("Введите число > "); //присваиваем значение через ввод числа
 
-bool check(int num) // отсеиваем двузнанчные числа
+bool check(int num) // отсеиваем двузначные числа
 {
-    if (num < 100)
-    {
-        Console.WriteLine($"В числе нет третьей цифры.");
-        return false;
-    }
-    else return true;
+    if (num > 99 || num < -99) return true;
+    return false;
 }
 
-
-int Result(int num) // функция на поиск и вывод третьей цифры в числе.
+void Result(int num) // функция на поиск и вывод третьей цифры в числе.
 {
-    int thirtyDig = number;
-    if (check(number))
+    if (check(num))
     {
-        while (thirtyDig > 999)        
+        int thirtyDig = num;
+        if (thirtyDig < 0) thirtyDig = thirtyDig * -1;
+        while (thirtyDig > 999)
         {
             thirtyDig = thirtyDig / 10;
         }
         thirtyDig = thirtyDig % 10;
+        Console.WriteLine($"третья цифра {thirtyDig}.");
     }
-    return thirtyDig;
+    else Console.WriteLine($"В числе нет третьей цифры.");
 }
-Console.WriteLine($"третья цифра {Result(number)}.");
+
+Result(number);
