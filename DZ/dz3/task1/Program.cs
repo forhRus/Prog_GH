@@ -44,7 +44,7 @@ int Pal(int num) //функция на разворот числа / хотел 
     return pal;
 }
 
-void CheckPol(int num) //сравниваем число и его "палиндром"
+void CheckPal(int num) //сравниваем число и его "палиндром"
 {
     if (Validate(num)) //проверка
     {
@@ -53,4 +53,4 @@ void CheckPol(int num) //сравниваем число и его "палинд
     }
 }
 
-CheckPol(number); //зовём проверку числа - палиндром ли оно?
+CheckPal(number); //зовём проверку числа - палиндром ли оно?
