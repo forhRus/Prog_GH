@@ -22,11 +22,11 @@ int[,] CreateDiArray(int[] arr) // функция заполняет двуме�
 {
     int[,] tempArray = new int[2, 3];
     int length = 0;
-    for (int j = 0; j < tempArray.GetLength(0); j++)
+    for (int i = 0; i < tempArray.GetLength(0); i++)
     {
-        for (int h = 0; h < tempArray.GetLength(1); h++)
+        for (int j = 0; j < tempArray.GetLength(1); j++)
         {
-            tempArray[j, h] = arr[length];
+            tempArray[i, j] = arr[length];
             length++;
         }
     }
@@ -36,7 +36,7 @@ int[,] CreateDiArray(int[] arr) // функция заполняет двуме�
 int[] FindMaxNumbers(int[,] arr) //ищем максимумы в строчках и записываем их в массив.
 {
     int[] tempArray = new int[arr.GetLength(0)];
-    int max = arr[0, 0];
+    int max;
     for (int i = 0; i < arr.GetLength(0); i++)
     {
         max = arr[i, 0];
@@ -52,7 +52,7 @@ int[] FindMaxNumbers(int[,] arr) //ищем максимумы в строчка
 int[] FindMinNumbers(int[,] arr) //ищем минимумы в столбцах и записываем их в массив.
 {
     int[] tempArray = new int[arr.GetLength(1)];
-    int min = arr[0, 0];
+    int min;
     for (int i = 0; i < arr.GetLength(1); i++)
     {
         min = arr[0, i];
