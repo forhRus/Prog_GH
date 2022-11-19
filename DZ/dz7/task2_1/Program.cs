@@ -3,7 +3,7 @@
 // 1 4 7 2
 // 5 9 2 3
 // 8 4 2 4
-// 17 -> такого числа в массиве нет
+// 1 и 7 -> такого числа в массиве нет
 int Prompt(string msg)
 {
     System.Console.Write(msg);
@@ -35,16 +35,15 @@ void PrintArray(int[,] array)
     }
 }
 
-void FindElement(int[,] array, int number)
+void FindElement(int[,] array, int rowN, int columnN)
 {
-    if (number <= 0
-        || number > array.GetLength(0) * array.GetLength(1))
-        System.Console.WriteLine("Элемента с таким порядковым номером в нашем массиве не существует!");
+    if (rowN <= 0
+    || rowN > array.GetLength(0)
+    || columnN <= 0
+    || columnN > array.GetLength(1)) System.Console.WriteLine("Такого элемента в массиве нет.");
     else
     {
-        int i = (number - 1) / array.GetLength(1);
-        int j = (number - 1) - array.GetLength(1) * i;
-        System.Console.WriteLine($"Элемент с номером {number} - {array[i, j]} для проверки его индексы [{i}, {j}]");
+        System.Console.WriteLine($"Искомый элемент - {array[rowN - 1, columnN - 1]}");
     }
 }
 
@@ -52,5 +51,6 @@ int row = 2;
 int column = 5;
 int[,] myArray = FillArray(row, column);
 PrintArray(myArray);
-int number = Prompt($"Введите номер элемента от 1 до {row * column} -> ");
-FindElement(myArray, number);
+int rowInput = Prompt($"Введите номер строки -> ");
+int columnInput = Prompt($"Введите номер столбца -> ");
+FindElement(myArray, rowInput, columnInput);
