@@ -19,15 +19,11 @@ bool Validate(int number) // функция для проверки положи
 
 void Power(int number) // выводим последовательность чисел "number" раз
 {
-    if (Validate(number))
+    for (int i = 1; i <= number; i++)
     {
-        for (int i = 1; i <= number; i++)
-        {
-            System.Console.Write($"{Math.Pow(i, 3)} "); //возводим в третью степень каждый шаг "i"
-        }
-        System.Console.WriteLine();
+        System.Console.Write($"{Math.Pow(i, 3)} "); //возводим в третью степень каждый шаг "i"
     }
-    else System.Console.WriteLine("Некорректные данные.");
+    System.Console.WriteLine();
 }
 
 Power(number);

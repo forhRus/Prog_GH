@@ -12,7 +12,7 @@ void PrintDiArray(int[,] arr) //функци выводит двухмерный
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            System.Console.Write(arr[i, j] + " ");
+            System.Console.Write($"{arr[i, j]}\t");
         }
         System.Console.WriteLine("");
     }
