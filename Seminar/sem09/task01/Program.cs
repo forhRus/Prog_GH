@@ -6,7 +6,7 @@ int Prompt(string massege) // функция на ввод числа с кон�
 {
     System.Console.Write(massege);
     return Convert.ToInt32(Console.ReadLine());
-   
+
 }
 void PrintNumber(int n)
 {
@@ -14,10 +14,10 @@ void PrintNumber(int n)
     {
         return;
     }
-    System.Console.WriteLine(n + " ");
+    // System.Console.WriteLine(n);
     PrintNumber(n - 1);
-    System.Console.WriteLine(n + " ");
-    
+    System.Console.WriteLine(n);
+
 }
 
 int number = Prompt("Задайте число -> ");
