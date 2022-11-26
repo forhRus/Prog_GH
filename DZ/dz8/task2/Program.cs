@@ -1,10 +1,22 @@
-﻿// Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
+﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
+// Задайте прямоугольный двумерный массив. Напишите программу, которая будет находить строку с наименьшей суммой элементов.
 // Например, задан массив:
 // 1 4 7 2
 // 5 9 2 3
 // 8 4 2 4
 // 5 2 6 7
 // Программа считает сумму элементов в каждой строке и выдаёт номер строки с наименьшей суммой элементов: 1 строка
+
+void PrintArray(int[] array)
+{
+    System.Console.Write(array[0]);
+    for (int i = 1; i < array.Length; i++)
+    {
+        System.Console.Write($", {array[i]}");
+    }
+    System.Console.WriteLine("");
+}
 
 int[,] CreateMatrix(int intI, int intJ, int min, int max)
 {
@@ -62,4 +74,5 @@ int SearchRowsMinSum(int[] array) //ищем минимальный элемен
 
 int[,] myMatrix = CreateMatrix(4, 4, 0, 10);
 PrintMatrix(myMatrix);
+PrintArray(sumArray(myMatrix));
 System.Console.WriteLine($"Наименьшая суммой элементов: {SearchRowsMinSum(sumArray(myMatrix)) + 1} строка.");
