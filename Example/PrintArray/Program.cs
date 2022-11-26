@@ -23,9 +23,10 @@ void PrintMatrix(int[,] matrix) //функци выводит двухмерны
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            System.Console.Write($"{arr[i, j]}\t");
+            System.Console.Write($"{matrix[i, j]}\t");
         }
         System.Console.WriteLine("");
     }
 }
+
 

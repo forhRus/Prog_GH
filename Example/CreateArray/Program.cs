@@ -8,14 +8,14 @@
     return tempArray;
 }
 
-int[,] CreateMatrix(int i, int j)
+int[,] CreateMatrix(int intI, int intJ, int min, int max)
 {
-    int[,] tempMatrix = new int[i, j];
-    for (int i = 0; i < i; i++)
+    int[,] tempMatrix = new int[intI, intJ];
+    for (int i = 0; i < intI; i++)
     {
-        for (int j = 0; j < j; j++)
+        for (int j = 0; j < intJ; j++)
         {
-            tempMatrix[i, j] = new Random().Next(0, 10);
+            tempMatrix[i, j] = new Random().Next(min, max);
         }
     }
     return tempMatrix;
