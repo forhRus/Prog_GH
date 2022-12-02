@@ -15,11 +15,13 @@ void PrintEvenNumbers(int a, int b)
         System.Console.WriteLine();
         return;
     }
-    if (a % 2 == 0)
+    if (a % 2 != 0)
     {
-        System.Console.Write(a + " ");
+        a++;
     }
-    PrintEvenNumbers(a + 1, b);
+
+    System.Console.Write(a + " ");
+    PrintEvenNumbers(a + 2, b);
 }
 
 int m = Prompt("m -> ");
